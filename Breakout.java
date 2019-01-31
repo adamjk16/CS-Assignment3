@@ -155,8 +155,11 @@ public class Breakout extends GraphicsProgram {
 			if (ball.getX() <= 0 || ball.getX() >= getWidth() - ball.getWidth()) {
 				vx = -vx;
 			}
-			if (ball.getY() <= 0 || ball.getY() > getHeight() - ball.getHeight()) {
+			if (ball.getY() <= 0) {
 				vy = -vy;
+			}
+			if (ball.getY() > getHeight() - ball.getHeight()) {
+				terminateGame();
 			}
 			GObject collider = getCollidingObject();
 			if (collider == paddle) {
@@ -187,5 +190,8 @@ public class Breakout extends GraphicsProgram {
 		}
 
 	}
+	
+	private void terminateGame() {
+	
 }
 	
