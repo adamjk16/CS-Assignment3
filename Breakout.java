@@ -106,12 +106,12 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	private GRect paddle = null; 
+	GRect paddle = null; 
 	
 	private void setUpPaddle() {
 		double x = getWidth()/2 - PADDLE_WIDTH/2;
 		double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
-		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		add (paddle, x, y);
 		addMouseListeners();
