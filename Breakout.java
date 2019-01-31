@@ -76,6 +76,7 @@ public class Breakout extends GraphicsProgram {
 		setCanvasSize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		setUpGame();
+		playGame();
 	}
 	
 	private void setUpGame() {
@@ -133,4 +134,19 @@ public class Breakout extends GraphicsProgram {
 		ball.setFilled(true);
 		add (ball, xBall, yBall);
 	}
+	
+	private void playGame() {
+		bounceBall();
+	}
+	
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private double vx;
+	private double vy;
+	
+	private void bounceBall() {
+		vx = rgen.nextDouble (VELOCITY_X_MIN, VELOCITY_X_MAX);
+		if (rgen.nextBoolean(0.5)) vx = -vx;
+		vy
+	}
 }
+	
