@@ -79,7 +79,11 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void setUpGame() {
-		
+		setUpBricks();
+	}
+	
+	private void setUpBricks() {
+		for (int rowNumber = 0; rowNumber )
 	}
 	
 
