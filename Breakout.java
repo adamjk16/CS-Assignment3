@@ -146,7 +146,7 @@ public class Breakout extends GraphicsProgram {
 	private void bounceBall() {
 		vx = rgen.nextDouble (VELOCITY_X_MIN, VELOCITY_X_MAX);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
-		vy
+		vy = VELOCITY_Y;
 	}
 }
 	
