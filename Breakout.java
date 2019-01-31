@@ -76,7 +76,9 @@ public class Breakout extends GraphicsProgram {
 		setCanvasSize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		setUpGame();
-		playGame();
+		while (NTURNS > 0) {
+			playGame();
+		}
 	}
 	
 	private void setUpGame() {
@@ -192,6 +194,8 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void terminateGame() {
+		NTURNS--;
+	}
 	
 }
 	
