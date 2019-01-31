@@ -163,7 +163,8 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void checkForCollisions() {
-		
+		getElementAt (x, y);
+		if 
 	}
 }
 	
