@@ -129,11 +129,11 @@ public class Breakout extends GraphicsProgram {
 	GOval ball = null;
 	
 	private void setUpBall() {
-		double xBall = getWidth()/2 - BALL_RADIUS;
-		double yBall = getHeight()/2 - BALL_RADIUS;
+		double x = getWidth()/2 - BALL_RADIUS;
+		double y = getHeight()/2 - BALL_RADIUS;
 		ball = new GOval (BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
-		add (ball, xBall, yBall);
+		add (ball, x, y);
 	}
 	
 	private void playGame() {
