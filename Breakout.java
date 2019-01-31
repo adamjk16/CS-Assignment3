@@ -194,9 +194,9 @@ public class Breakout extends GraphicsProgram {
 	
 	private void terminateGame() {
 		GLabel label = new GLabel ("Game Over!");
+		label.setFont ("SansSerif-28");
 		double x = getWidth()/2 - label.getWidth()/2;
 		double y = getHeight()/2 - label.getAscent()/2;
-		label.setFont ("SansSerif-28");
 		add (label, x, y);
 	}
 	
