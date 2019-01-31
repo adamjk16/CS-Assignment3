@@ -138,7 +138,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private void playGame() {
 		bounceBall();
-		getCollidingObject();
+		getBrick();
 	}
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
@@ -160,6 +160,12 @@ public class Breakout extends GraphicsProgram {
 				vy = -vy;
 			}	
 		}
+	}
+	
+	private void = getBrick() {
+	GObject collider = getCollidingObject();
+	if (collider != null) {
+		remove(collider);
 	}
 	
 	private GObject getCollidingObject() {
