@@ -159,5 +159,5 @@ public class Breakout extends GraphicsProgram {
 		pause(DELAY);
 		}
 	}	
-}
+
 	
