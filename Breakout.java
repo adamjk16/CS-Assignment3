@@ -76,7 +76,6 @@ public class Breakout extends GraphicsProgram {
 		setCanvasSize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		setUpGame();
-		addMouseListeners();
 	}
 	
 	private void setUpGame() {
@@ -113,6 +112,7 @@ public class Breakout extends GraphicsProgram {
 		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		add (paddle, x, y);
+		addMouseListeners();
 	}
 	
 	public void mouseMoved (MouseEvent e) {
