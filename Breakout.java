@@ -151,7 +151,7 @@ public class Breakout extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5)) {
 			vx = -vx;
 		}
-		if (hitLeftWall(ball) || hitRightWall(ball)) {
+		if (ball.getX() <= 0 || hitRightWall(ball)) {
 			vx = -vx;
 		}
 		ball.move(vx, vy);
