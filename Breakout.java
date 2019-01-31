@@ -161,6 +161,7 @@ public class Breakout extends GraphicsProgram {
 			GObject collider = getCollidingObject();
 			if (collider != null) {
 				remove(collider);
+				vy = -vy;
 			}
 		}
 	}
