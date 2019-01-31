@@ -81,6 +81,7 @@ public class Breakout extends GraphicsProgram {
 	private void setUpGame() {
 		setUpBricks();
 		setUpPaddle();
+		setUpBall();
 	}
 	
 	private void setUpBricks() {
@@ -122,5 +123,13 @@ public class Breakout extends GraphicsProgram {
 		if (x < getWidth() - PADDLE_WIDTH/2  && x > PADDLE_WIDTH/2) {
 			paddle.setLocation(x - PADDLE_WIDTH/2, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT/2);
 		}
+	}
+	
+	private void setUpBall() {
+		double x = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS;
+		double y = getWidth()/2 - BALL_RADIUS/2;
+		GOval ball = new GOval (BALL_RADIUS, BALL_RADIUS);
+		ball.setFilled(true);
+		add (ball, x, y);
 	}
 }
