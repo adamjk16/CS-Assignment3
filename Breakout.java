@@ -163,6 +163,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private GObject getCollidingObject() {
+		GObject collider = getCollidingObject();
 		if (getElementAt (ball.getX(), ball.getY()) != null) {
 			return getElementAt (ball.getX(), ball.getY());
 		}
@@ -175,7 +176,6 @@ public class Breakout extends GraphicsProgram {
 		if (getElementAt (ball.getX() + (2 * BALL_RADIUS), ball.getY() + (2 * BALL_RADIUS)) != null) {
 			return getElementAt (ball.getX() + (2 * BALL_RADIUS), ball.getY() + (2 * BALL_RADIUS));
 		}
-		GObject collider = getCollidingObject();
 		}
 
 	}
