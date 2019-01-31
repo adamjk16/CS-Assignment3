@@ -151,6 +151,7 @@ public class Breakout extends GraphicsProgram {
 				vx = -vx;
 			}
 			ball.move(vx, vy);
+			pause (DELAY);
 			if (ball.getX() <= 0 || ball.getX() >= getWidth() - ball.getWidth()) {
 				vx = -vx;
 			}
