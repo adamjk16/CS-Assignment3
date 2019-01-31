@@ -193,10 +193,11 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void terminateGame() {
-		double x = getWidth()/2 - BALL_RADIUS;
-		double y = getHeight()/2 - BALL_RADIUS;
-		GLabel over = new GLabel ("Game Over!");
-		add (over, x, y);
+		GLabel label = new GLabel ("Game Over!");
+		double x = getWidth()/2 - label.getWidth()/2;
+		double y = getHeight()/2 - label.getAscent()/2;
+		label.setFont ("SansSerif-28");
+		add (label, x, y);
 	}
 	
 }
