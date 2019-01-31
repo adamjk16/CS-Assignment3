@@ -74,9 +74,8 @@ public class Breakout extends GraphicsProgram {
 		// Set the canvas size.  In your code, remember to ALWAYS use getWidth()
 		// and getHeight() to get the screen dimensions, not these constants!
 		setCanvasSize(CANVAS_WIDTH, CANVAS_HEIGHT);
-
-		setUpGame();
-		while (NTURNS > 0) {
+		for (int i = 0; i < NTURNS; i++) {
+			setUpGame();
 			playGame();
 		}
 	}
@@ -161,7 +160,6 @@ public class Breakout extends GraphicsProgram {
 				vy = -vy;
 			}
 			if (ball.getY() > getHeight() - ball.getHeight()) {
-				
 				terminateGame();
 			}
 			GObject collider = getCollidingObject();
@@ -195,8 +193,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void terminateGame() {
-		NTURNS--;
-		if (NTURNS)
+		println ("Game Over");
 	}
 	
 }
