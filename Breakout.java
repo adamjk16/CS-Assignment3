@@ -75,7 +75,12 @@ public class Breakout extends GraphicsProgram {
 		// and getHeight() to get the screen dimensions, not these constants!
 		setCanvasSize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
-		/* You fill this in, along with any subsidiary methods */
+		setUpGame();
 	}
+	
+	private void setUpGame() {
+		
+	}
+	
 
 }
