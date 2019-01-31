@@ -81,6 +81,7 @@ public class Breakout extends GraphicsProgram {
 	private void setUpGame() {
 		setUpBricks();
 		setUpPaddle();
+		addMouseListeners();
 	}
 	
 	private void setUpBricks() {
