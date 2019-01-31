@@ -76,12 +76,12 @@ public class Breakout extends GraphicsProgram {
 		setCanvasSize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		setUpGame();
+		addMouseListeners();
 	}
 	
 	private void setUpGame() {
 		setUpBricks();
 		setUpPaddle();
-		addMouseListeners();
 	}
 	
 	private void setUpBricks() {
@@ -115,5 +115,7 @@ public class Breakout extends GraphicsProgram {
 		add (paddle, x, y);
 	}
 	
-
+	public void mouseMoved (MouseEvent e) {
+		
+	}
 }
