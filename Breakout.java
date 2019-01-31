@@ -126,11 +126,12 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
+	GOval ball = null;
 	
 	private void setUpBall() {
 		double xBall = getWidth()/2 - BALL_RADIUS;
 		double yBall = getHeight()/2 - BALL_RADIUS;
-		GOval ball = new GOval (BALL_RADIUS, BALL_RADIUS);
+		ball = new GOval (BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
 		add (ball, xBall, yBall);
 	}
@@ -141,10 +142,12 @@ public class Breakout extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private double vx;
+	private double vy;
 	
 	private void bounceBall() {
 		vx = rgen.nextDouble (VELOCITY_X_MIN, VELOCITY_X_MAX);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
+		ball.move(vx, vy);
 	}
 }
 	
