@@ -163,6 +163,7 @@ public class Breakout extends GraphicsProgram {
 			}
 			if (ball.getY() > getHeight() - ball.getHeight()) {
 				terminateGame();
+				break;
 			}
 			GObject collider = getCollidingObject();
 			if (collider == paddle) {
