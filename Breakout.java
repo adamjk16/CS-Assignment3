@@ -216,8 +216,7 @@ public class Breakout extends GraphicsProgram {
 		double x = getWidth()/2 - playAgain.getWidth()/2;
 		double y = getHeight()/2 - playAgain.getAscent()/2;
 		add (playAgain, x, y);
+		addMouseListeners();
 	}
-	
-	
 }
 	
