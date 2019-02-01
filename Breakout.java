@@ -197,13 +197,27 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void terminateGame() {
-		GLabel label = new GLabel ("Game Over!");
-		label.setFont ("SansSerif-28");
-		double x = getWidth()/2 - label.getWidth()/2;
-		double y = getHeight()/2 - label.getAscent()/2;
-		add (label, x, y);
-		
+		gameOver();
+		if (NTURNS < 3) {
+			playAgain();
+		}	
 	}
+	private void gameOver() {
+		GLabel gameOver = new GLabel ("Game Over!");
+		gameOver.setFont ("SansSerif-28");
+		double x = getWidth()/2 - gameOver.getWidth()/2;
+		double y = getHeight()/2 - gameOver.getAscent()/2;
+		add (gameOver, x, y);
+	}
+	
+	private void playAgain() {
+		GLabel playAgain = new GLabel ("Click to Play Again!");
+		playAgain.setFont ("SansSerif-28");
+		double x = getWidth()/2 - playAgain.getWidth()/2;
+		double y = getHeight()/2 - playAgain.getAscent()/2;
+		add (playAgain, x, y);
+	}
+	
 	
 }
 	
