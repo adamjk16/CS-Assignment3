@@ -228,12 +228,8 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void startOver() {
-		addMouseListeners();
+		waitForClick();
 		remove (tryAgain);
-	}
-	
-	public void mouseClicked (MouseEvent e) {
-		ball.setLocation (getWidth()/2 - BALL_RADIUS, getHeight()/2 - BALL_RADIUS);
 	}
 }
 
