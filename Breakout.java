@@ -82,6 +82,7 @@ public class Breakout extends GraphicsProgram {
 				terminateGame();
 			}
 		}
+		gameOver();
 	}
 
 	private void setUpGame() {
@@ -203,9 +204,10 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void terminateGame() {
-		gameOver();
+		tryAgain();
 		remove (paddle);
 		remove (ball);
+		startOver();
 	}
 	private void gameOver() {
 		GLabel gameOver = new GLabel ("Game Over!");
@@ -213,6 +215,18 @@ public class Breakout extends GraphicsProgram {
 		double x = getWidth()/2 - gameOver.getWidth()/2;
 		double y = getHeight()/2 - gameOver.getAscent()/2;
 		add (gameOver, x, y);
+	}
+	
+	private void tryAgain() {
+		GLabel tryAgain = new GLabel ("Try Again!");
+		tryAgain.setFont ("SansSerif-28");
+		double x = getWidth()/2 - tryAgain.getWidth()/2;
+		double y = getHeight()/2 - tryAgain.getAscent()/2;
+		add (tryAgain, x, y);
+	}
+	
+	private void startOver() {
+		waitForClick();
 	}
 }
 
