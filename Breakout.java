@@ -143,7 +143,9 @@ public class Breakout extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private double vx, vy;
-	private o
+	
+	int bricks = 100;
+	
 	private void bounceBall() {
 			vy = VELOCITY_Y;
 			vx = rgen.nextDouble (1.0, 3.0);
@@ -168,6 +170,7 @@ public class Breakout extends GraphicsProgram {
 			} else if (collider != null) {
 				remove(collider);
 				vy = -vy;
+				bricks--;
 			}
 		}
 	}
