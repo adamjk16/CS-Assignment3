@@ -79,13 +79,13 @@ public class Breakout extends GraphicsProgram {
 			playGame();
 		}
 	}
-	
+
 	private void setUpGame() {
 		setUpBricks();
 		setUpPaddle();
 		setUpBall();
 	}
-	
+
 	private void setUpBricks() {
 		double x = getWidth()/2 - BRICK_SEP/2 - (BRICK_WIDTH * (NBRICK_COLUMNS/2)) - ((NBRICK_COLUMNS/2 - 1) * BRICK_SEP);
 		double y = BRICK_Y_OFFSET;
@@ -108,9 +108,9 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 	}
-	
+
 	GRect paddle = null; 
-	
+
 	private void setUpPaddle() {
 		double x = getWidth()/2 - PADDLE_WIDTH/2;
 		double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
@@ -119,16 +119,16 @@ public class Breakout extends GraphicsProgram {
 		add (paddle, x, y);
 		addMouseListeners();
 	}
-	
+
 	public void mouseMoved (MouseEvent e) {
 		int x = e.getX();
 		if (x < getWidth() - PADDLE_WIDTH/2  && x > PADDLE_WIDTH/2) {
 			paddle.setLocation(x - PADDLE_WIDTH/2, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT/2);
 		}
 	}
-	
+
 	GOval ball = null;
-	
+
 	private void setUpBall() {
 		double x = getWidth()/2 - BALL_RADIUS;
 		double y = getHeight()/2 - BALL_RADIUS;
@@ -136,23 +136,23 @@ public class Breakout extends GraphicsProgram {
 		ball.setFilled(true);
 		add (ball, x, y);
 	}
-	
+
 	private void playGame() {
 		bounceBall();
 	}
-	
+
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private double vx, vy;
-	
+
 	int bricks = 100;
-	
+
 	private void bounceBall() {
-			vy = VELOCITY_Y;
-			vx = rgen.nextDouble (1.0, 3.0);
-			if (rgen.nextBoolean(0.5)) {
-				vx = -vx;
-			}
-			while (true) {
+		vy = VELOCITY_Y;
+		vx = rgen.nextDouble (1.0, 3.0);
+		if (rgen.nextBoolean(0.5)) {
+			vx = -vx;
+		}
+		while (true) {
 			ball.move(vx, vy);
 			pause (DELAY);
 			if (ball.getX() <= 0 || ball.getX() >= getWidth() - ball.getWidth()) {
@@ -174,10 +174,10 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 	}
-	
-	
+
+
 	private GObject getCollidingObject() {
-		
+
 		if (getElementAt (ball.getX(), ball.getY()) != null) {
 			return getElementAt (ball.getX(), ball.getY());
 		}
@@ -194,7 +194,7 @@ public class Breakout extends GraphicsProgram {
 		}
 
 	}
-	
+
 	private void terminateGame() {
 		gameOver();
 	}
@@ -206,4 +206,4 @@ public class Breakout extends GraphicsProgram {
 		add (gameOver, x, y);
 	}
 }
-	
+
