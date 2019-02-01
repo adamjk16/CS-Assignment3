@@ -65,7 +65,7 @@ public class Breakout extends GraphicsProgram {
 	public static final double DELAY = 1000.0 / 60.0;
 
 	// Number of turns 
-	public static final int NTURNS = 3;
+	public static int NTURNS = 3;
 
 	public void run() {
 		// Set the window's title bar text
