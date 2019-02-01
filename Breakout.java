@@ -65,7 +65,7 @@ public class Breakout extends GraphicsProgram {
 	public static final double DELAY = 1000.0 / 60.0;
 
 	// Number of turns 
-	public static int NTURNS = 3;
+	public static final int NTURNS = 3;
 
 	public void run() {
 		// Set the window's title bar text
@@ -198,9 +198,6 @@ public class Breakout extends GraphicsProgram {
 	
 	private void terminateGame() {
 		gameOver();
-		if (NTURNS < 3) {
-			playAgain();
-		}	
 	}
 	private void gameOver() {
 		GLabel gameOver = new GLabel ("Game Over!");
@@ -208,15 +205,6 @@ public class Breakout extends GraphicsProgram {
 		double x = getWidth()/2 - gameOver.getWidth()/2;
 		double y = getHeight()/2 - gameOver.getAscent()/2;
 		add (gameOver, x, y);
-	}
-	
-	private void playAgain() {
-		GLabel playAgain = new GLabel ("Click to Play Again!");
-		playAgain.setFont ("SansSerif-28");
-		double x = getWidth()/2 - playAgain.getWidth()/2;
-		double y = getHeight()/2 - playAgain.getAscent()/2;
-		add (playAgain, x, y);
-		addMouseListeners();
 	}
 }
 	
