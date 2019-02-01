@@ -209,7 +209,6 @@ public class Breakout extends GraphicsProgram {
 		double x = getWidth()/2 - gameOver.getWidth()/2;
 		double y = getHeight()/2 - gameOver.getAscent()/2;
 		add (gameOver, x, y);
-		
 	}
 }
 
