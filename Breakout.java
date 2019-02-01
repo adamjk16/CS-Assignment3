@@ -142,6 +142,7 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+	
 	private double vx, vy;
 
 	int bricks = 100;
@@ -165,11 +166,12 @@ public class Breakout extends GraphicsProgram {
 				terminateGame();
 				break;
 			}
+			
 			GObject collider = getCollidingObject();
 			if (collider == paddle) {
 				vy = -vy;
 			} else if (collider != null) {
-				remove(collider);
+				remove (collider);
 				vy = -vy;
 				bricks--;
 			}
