@@ -217,8 +217,10 @@ public class Breakout extends GraphicsProgram {
 		add (gameOver, x, y);
 	}
 	
+	private GLabel tryAgain;
+	
 	private void tryAgain() {
-		GLabel tryAgain = new GLabel ("Try Again!");
+		tryAgain = new GLabel ("Try Again!");
 		tryAgain.setFont ("SansSerif-28");
 		double x = getWidth()/2 - tryAgain.getWidth()/2;
 		double y = getHeight()/2 - tryAgain.getAscent()/2;
@@ -227,6 +229,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private void startOver() {
 		addMouseListeners();
+		remove (tryAgain);
 	}
 	
 	public void mouseClicked (MouseEvent e) {
