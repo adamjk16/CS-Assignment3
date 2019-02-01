@@ -198,6 +198,7 @@ public class Breakout extends GraphicsProgram {
 		double x = getWidth()/2 - label.getWidth()/2;
 		double y = getHeight()/2 - label.getAscent()/2;
 		add (label, x, y);
+		NTURNS--;
 	}
 	
 }
