@@ -230,7 +230,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void mouseClicked (MouseEvent e) {
-		
+		ball.setLocation
 	}
 }
 
