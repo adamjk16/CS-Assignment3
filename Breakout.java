@@ -183,7 +183,9 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 	}
-	public void 
+	public void mouseClicked (MouseEvent e) {
+		
+	}
 
 	private GObject getCollidingObject() {
 
