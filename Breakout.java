@@ -159,6 +159,7 @@ public class Breakout extends GraphicsProgram {
 			vx = -vx;
 		}
 		while (true) {
+			addMouseListeners();
 			ball.move(vx, vy);
 			pause (DELAY);
 			if (ball.getX() <= 0 || ball.getX() >= getWidth() - ball.getWidth()) {
@@ -182,7 +183,7 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 	}
-
+	public void 
 
 	private GObject getCollidingObject() {
 
