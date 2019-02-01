@@ -77,6 +77,9 @@ public class Breakout extends GraphicsProgram {
 		for (int i = 0; i < NTURNS; i++) {
 			setUpGame();
 			playGame();
+			if (bricks == 0) {
+				terminateGame();
+			}
 		}
 	}
 
@@ -163,8 +166,7 @@ public class Breakout extends GraphicsProgram {
 				vy = -vy;
 			}
 			if (ball.getY() > getHeight() - ball.getHeight()) {
-				terminateGame();
-				break;
+				vy = -vy;
 			}
 			
 			GObject collider = getCollidingObject();
