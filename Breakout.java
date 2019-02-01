@@ -200,6 +200,8 @@ public class Breakout extends GraphicsProgram {
 
 	private void terminateGame() {
 		gameOver();
+		remove (paddle);
+		remove (ball);
 	}
 	private void gameOver() {
 		GLabel gameOver = new GLabel ("Game Over!");
