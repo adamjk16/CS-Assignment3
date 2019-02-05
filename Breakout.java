@@ -162,13 +162,13 @@ public class Breakout extends GraphicsProgram {
 			addMouseListeners();
 			ball.move(vx, vy);
 			pause (DELAY);
-			if (ball.getX() <= 0 || ball.getX() >= getWidth() - ball.getWidth()) {
+			if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() * 2)) {
 				vx = -vx;
 			}
 			if (ball.getY() <= 0) {
 				vy = -vy;
 			}
-			if (ball.getY() > getHeight() - ball.getHeight()) {
+			if (ball.getY() > getHeight() - (ball.getHeight() * 2)) {
 				terminateGame();
 				break;
 			}
