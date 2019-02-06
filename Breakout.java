@@ -194,9 +194,15 @@ public class Breakout extends GraphicsProgram {
 			
 	private void moveBall() {
 		ball.move(vx, vy);
+		
+		//Ball will flip vx if it hits either side wall
+		
 		if (ball.getX() < 0 || ball.getX() + BALL_RADIUS > getWidth()) {			
 			vx = -vx;
 		}
+		
+		//Ball will flip vy if it hits either side wall
+		
 		if (ball.getY() < 0) {
 			vy = -vy;
 		}
