@@ -78,9 +78,8 @@ public class Breakout extends GraphicsProgram {
 		for (int i = 0; i < NTURNS; i++) {
 			setUpGame();
 			playGame();
-			if (bricks == 0) {
-				terminateGame();
-			}
+			tryAgain();
+			startOver();
 		}
 		gameOver();
 	}
