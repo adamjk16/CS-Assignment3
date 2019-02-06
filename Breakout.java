@@ -171,19 +171,19 @@ public class Breakout extends GraphicsProgram {
 			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
 				break;
 			}
-			
-			GObject collider = getCollidingObject();
-			if (collider == paddle) {
-				if (ball.getY() >= getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS * 2) {
-				vy = -vy;
-				}
-			} else if (collider != null) {
-				remove (collider);
-				vy = -vy;
-				bricks--;
+		}	
+		
+		GObject collider = getCollidingObject();
+		if (collider == paddle) {
+			if (ball.getY() >= getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS * 2) {				vy = -vy;
 			}
+		} else if (collider != null) {
+			remove (collider);
+			vy = -vy;
+			bricks--;
 		}
 	}
+	
 	public void mouseClicked (MouseEvent e) {
 		
 	}
