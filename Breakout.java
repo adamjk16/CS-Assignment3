@@ -62,7 +62,7 @@ public class Breakout extends GraphicsProgram {
 	public static final double VELOCITY_X_MAX = 3.0;
 
 	// Animation delay or pause time between ball moves (ms)
-	public static final double DELAY = 1000.0 / 100.0;
+	public static final double DELAY = 1000.0 / 300.0;
 
 	// Number of turns 
 	public static final int NTURNS = 3;
@@ -81,10 +81,6 @@ public class Breakout extends GraphicsProgram {
 			if (i < NTURNS - 1) {
 				tryAgain();
 				startOver();
-			}
-			if (bricks == 0) {
-				winner();
-				break;	
 			}
 		}
 		gameOver();
@@ -187,6 +183,9 @@ public class Breakout extends GraphicsProgram {
 			remove (collider);
 			vy = -vy;
 			bricks--;
+			if (bricks == 0) {
+				winner();	
+			}
 		}
 		pause (DELAY);
 	}
