@@ -242,7 +242,7 @@ public class Breakout extends GraphicsProgram {
 		pause (DELAY);
 	}
 	
-	private void () {
+	private void counterLabel() {
 		removeAll();
 		tryAgain = new GLabel ("Try Again!");
 		tryAgain.setFont ("Calibri-28");
