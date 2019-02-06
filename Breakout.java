@@ -232,7 +232,7 @@ public class Breakout extends GraphicsProgram {
 		pause (DELAY);
 	}
 	
-	//returns null
+	//returns null if the ball hits a brick
 	private GObject getCollidingObject() {
 
 		if (getElementAt (ball.getX(), ball.getY()) != null) {
