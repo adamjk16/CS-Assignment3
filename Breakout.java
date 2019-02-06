@@ -185,7 +185,6 @@ public class Breakout extends GraphicsProgram {
 	
 	private double vx, vy;
 
-
 	private void getVelocity() {
 		vy = VELOCITY_Y;
 		vx = rgen.nextDouble (1.0, 3.0);
