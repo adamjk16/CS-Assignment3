@@ -33,6 +33,14 @@ public class MouseReporter extends GraphicsProgram {
 		
 		// add the label to the screen!
 		add(label, INDENT, getHeight()/2);
+		
+		addMouseListeners();
+	}
+	
+	public void mouseMoved (MouseEvent e) {
+		int x = e.getX();
+		int y = e.getY();
+		
 	}
 	
 
