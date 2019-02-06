@@ -179,7 +179,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private void score() {
 		score = new GLabel ("Score: " + counter);
-		score.setFont ("Calibri-28");
+		score.setFont ("Calibri-14");
 		score.setColor (Color.GREEN);
 		double x = getWidth() - score.getWidth();
 		double y = getHeight() - score.getAscent();
