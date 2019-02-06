@@ -166,28 +166,29 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
+	GObject collider = getCollidingObject();
+	
 	private void moveBall() {
 		addMouseListeners();
-			ball.move(vx, vy);
-			pause (DELAY);
-			if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {
-				vx = -vx;
-			}
-			if (ball.getY() <= 0) {
+		ball.move(vx, vy);
+		pause (DELAY);
+		if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {			
+			vx = -vx;
+		}
+		if (ball.getY() <= 0) {
+			vy = -vy;
+		}
+		if (collider == paddle) {
+			if (ball.getY() >= getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS * 2) {						
 				vy = -vy;
-			}
-			
-				GObject collider = getCollidingObject();
-				if (collider == paddle) {
-					if (ball.getY() >= getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS * 2) {						
-						vy = -vy;
-					}		
-				} else if (collider != null) {
-						remove (collider);
-						vy = -vy;
-						bricks--;
-					}	
-				}
+			}		
+		} 
+		if (collider != null) {
+			remove (collider);
+			vy = -vy;
+			bricks--;
+		}	
+	}
 	
 		
 		
