@@ -171,7 +171,7 @@ public class Breakout extends GraphicsProgram {
 		if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {			
 			vx = -vx;
 		}
-		if (ball.getY() <= 0 || ball.getY() > getHeight() - (ball.getHeight() / 2)) {
+		if (ball.getY() <= 0) {
 			vy = -vy;
 		}
 		GObject collider = getCollidingObject();
