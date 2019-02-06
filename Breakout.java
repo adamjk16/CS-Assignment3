@@ -160,6 +160,7 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void playGame() {
+		getVelocity();
 		addMouseListeners();
 		while (true) {
 			moveBall();			
@@ -169,8 +170,8 @@ public class Breakout extends GraphicsProgram {
 		}	
 	}
 	
-	public void mouseClicked (MouseEvent g) {
-		getVelocity();
+	public void mouseClicked (MouseEvent e) {
+	
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
