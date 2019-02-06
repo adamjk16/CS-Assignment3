@@ -171,7 +171,6 @@ public class Breakout extends GraphicsProgram {
 	private void moveBall() {
 		addMouseListeners();
 		ball.move(vx, vy);
-		pause (DELAY);
 		if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {			
 			vx = -vx;
 		}
@@ -187,7 +186,8 @@ public class Breakout extends GraphicsProgram {
 			remove (collider);
 			vy = -vy;
 			bricks--;
-		}	
+		}
+		pause (DELAY);
 	}
 	
 		
