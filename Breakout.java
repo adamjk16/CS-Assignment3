@@ -166,10 +166,10 @@ public class Breakout extends GraphicsProgram {
 			moveBall();
 			
 			/*
-			 * 
+			 * If the y-coordinate moves past the 
 			 */
 			
-			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
+			if (ball.getY() > getHeight()) {
 				break;
 			}
 		}	
