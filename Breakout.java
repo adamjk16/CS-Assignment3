@@ -176,7 +176,6 @@ public class Breakout extends GraphicsProgram {
 	int counter = 0;
 	
 	private void scoreLabel() {
-		removeAll();
 		GLabel scoreLabel = new GLabel ("Score: " + counter);
 		scoreLabel.setFont ("Calibri-28");
 		scoreLabel.setColor (Color.GREEN);
