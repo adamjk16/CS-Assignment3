@@ -95,6 +95,7 @@ public class Breakout extends GraphicsProgram {
 		setUpBricks();
 		setUpPaddle();
 		setUpBall();
+		counterLabel();
 	}
 
 	private void setUpBricks() {
