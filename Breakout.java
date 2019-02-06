@@ -181,7 +181,7 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 		if (ball.getY() <= 0) {
-			if (vy > 0) {
+			if (vy < 0) {
 				vy = -vy;
 			}
 		}
