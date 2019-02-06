@@ -62,7 +62,7 @@ public class Breakout extends GraphicsProgram {
 	public static final double VELOCITY_X_MAX = 3.0;
 
 	// Animation delay or pause time between ball moves (ms)
-	public static final double DELAY = 1000.0 / 300.0;
+	public static final double DELAY = 1000.0 / 60.0;
 
 	// Number of turns 
 	public static final int NTURNS = 3;
@@ -220,6 +220,7 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void gameOver() {
+		removeAll();
 		GLabel gameOver = new GLabel ("Game Over!");
 		gameOver.setFont ("SansSerif-28");
 		gameOver.setColor(Color.RED);
