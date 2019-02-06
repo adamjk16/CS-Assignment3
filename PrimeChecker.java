@@ -41,10 +41,10 @@ public class PrimeChecker extends ConsoleProgram {
 	 */
 	public boolean isPrime(int n) {
 		for (int i = 2; i < n; i++) {
-			if (i % n == 0) {
+			if (n % i == 0) {
 				return false;
 			}
 		}
-		return n % i != 0; // this is only here so the program compiles
+		return true; // this is only here so the program compiles
 	}
 }
