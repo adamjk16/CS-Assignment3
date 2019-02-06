@@ -143,7 +143,8 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void playGame() {
-		bounceBall();
+		getVelocity();
+		moveBall();
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
@@ -152,12 +153,15 @@ public class Breakout extends GraphicsProgram {
 
 	int bricks = 100;
 
-	private void bounceBall() {
+	private void getVelocity() {
 		vy = VELOCITY_Y;
 		vx = rgen.nextDouble (1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) {
 			vx = -vx;
 		}
+	}
+	
+	private void moveBall() {
 		addMouseListeners();
 		while (true) {
 			ball.move(vx, vy);
