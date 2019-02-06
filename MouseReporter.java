@@ -42,6 +42,8 @@ public class MouseReporter extends GraphicsProgram {
 		int x = e.getX();
 		int y = e.getY();
 		label.setLabel(x + "," + y);
+		
+		//checks if an object exists under the mouse 
 		if (getElementAt (x, y) != null) {
 			label.setColor(Color.RED);
 		} else if (getElementAt (x, y) == null) {
