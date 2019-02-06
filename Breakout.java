@@ -232,7 +232,8 @@ public class Breakout extends GraphicsProgram {
 	
 	/*
 	 * returns null if the ball (at any point on the ball)hits a brick, section
-	 * covers 4 points occupying the four corners of the square
+	 * covers 4 points occupying the four corners of the square in which the ball
+	 * is inscribed
 	 */
 	private GObject getCollidingObject() {
 
