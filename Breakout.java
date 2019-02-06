@@ -153,6 +153,10 @@ public class Breakout extends GraphicsProgram {
 			}
 		}	
 	}
+	
+	public void mouseClicked (MouseEvent g) {
+		
+	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
