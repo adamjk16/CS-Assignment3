@@ -134,13 +134,17 @@ public class Breakout extends GraphicsProgram {
 
 	public void mouseMoved (MouseEvent e) {
 		int x = e.getX();
+		
 		/* 
 		 * As the mouse tracks the center of the paddle, the mouse must 
 		 * remain within half of the width of the paddle from the edge of the
 		 * screen on both sides
-		 * the mouse will track the center point of the paddle
 		 */
+		
 		if (x < PADDLE_WIDTH/2  && x > getWidth() - PADDLE_WIDTH/2) {
+			
+			//Mouse will track the center of the paddle
+			
 			paddle.setLocation(x - PADDLE_WIDTH/2, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		}
 	}
