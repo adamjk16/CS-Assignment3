@@ -162,16 +162,16 @@ public class Breakout extends GraphicsProgram {
 	private void playGame() {
 		getVelocity();
 		addMouseListeners();
-	
-	}
-	
-	public void mouseClicked (MouseEvent e) {
 		while (true) {
 			moveBall();			
 			if (ball.getY() > getHeight()) {
 				break;
 			}
-		}
+		}	
+	}
+	
+	public void mouseClicked (MouseEvent e) {
+	
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
