@@ -62,7 +62,7 @@ public class Breakout extends GraphicsProgram {
 	public static final double VELOCITY_X_MAX = 3.0;
 
 	// Animation delay or pause time between ball moves (ms)
-	public static final double DELAY = 1000.0 / 60.0;
+	public static final double DELAY = 1000.0 / 80.0;
 
 	// Number of turns 
 	public static final int NTURNS = 3;
@@ -93,7 +93,9 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void setUpBricks() {
+		//defines x-coordinate of upper left brick in 1st row
 		double x = getWidth()/2 - BRICK_SEP/2 - (BRICK_WIDTH * (NBRICK_COLUMNS/2)) - ((NBRICK_COLUMNS/2 - 1) * BRICK_SEP);
+		//defines y-coordinate of 
 		double y = BRICK_Y_OFFSET;
 		//
 		for (int rowNumber = 1; rowNumber <= NBRICK_ROWS; rowNumber++) {
