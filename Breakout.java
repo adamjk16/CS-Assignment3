@@ -169,7 +169,6 @@ public class Breakout extends GraphicsProgram {
 				vy = -vy;
 			}
 			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
-				terminateGame();
 				break;
 			}
 			
