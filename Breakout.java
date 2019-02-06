@@ -151,9 +151,6 @@ public class Breakout extends GraphicsProgram {
 		addMouseListeners();
 		while (true) {
 			moveBall();
-			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
-				break;
-			}
 		}	
 	}
 
@@ -177,7 +174,7 @@ public class Breakout extends GraphicsProgram {
 		if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {			
 			vx = -vx;
 		}
-		if (ball.getY() <= 0 || ) {
+		if (ball.getY() <= 0 || ball.getY() > getHeight() - (ball.getHeight() / 2)) {
 			vy = -vy;
 		}
 		GObject collider = getCollidingObject();
