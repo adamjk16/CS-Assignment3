@@ -146,9 +146,6 @@ public class Breakout extends GraphicsProgram {
 	private void playGame() {
 		getVelocity();
 		addMouseListeners();
-	}	
-		
-	public void mouseClicked (MouseEvent g) {	
 		while (true) {
 			moveBall();
 			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
@@ -195,10 +192,6 @@ public class Breakout extends GraphicsProgram {
 		}
 		pause (DELAY);
 	}
-	
-		
-		
-	
 	
 
 	private GObject getCollidingObject() {
