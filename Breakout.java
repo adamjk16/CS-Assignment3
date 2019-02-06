@@ -230,7 +230,10 @@ public class Breakout extends GraphicsProgram {
 		pause (DELAY);
 	}
 	
-	//returns null if the ball hits a brick
+	/*
+	 * returns null if the ball (at any point on the ball)hits a brick, section
+	 * covers 4 points occupying the four corners of the square
+	 */
 	private GObject getCollidingObject() {
 
 		if (getElementAt (ball.getX(), ball.getY()) != null) {
