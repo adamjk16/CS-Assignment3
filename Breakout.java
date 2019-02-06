@@ -214,7 +214,9 @@ public class Breakout extends GraphicsProgram {
 			//Flips vy 
 			if (vy < 0) {
 				vy *= 1;
-			} 
+			} else if (vy > 0) {
+				vy *= -1;
+			}
 		}	else if (collider != null) {
 				remove (collider);
 				vy = -vy;
