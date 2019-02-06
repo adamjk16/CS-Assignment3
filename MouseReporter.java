@@ -40,7 +40,7 @@ public class MouseReporter extends GraphicsProgram {
 	public void mouseMoved (MouseEvent e) {
 		int x = e.getX();
 		int y = e.getY();
-		String getLabel (x, y);
+		char coord = label.charAt(x, y);
 	}
 	
 
