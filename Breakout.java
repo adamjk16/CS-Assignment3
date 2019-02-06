@@ -166,7 +166,7 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	GObject collider = getCollidingObject();
+	private GObject collider = getCollidingObject();
 	
 	private void moveBall() {
 		addMouseListeners();
