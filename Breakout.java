@@ -132,7 +132,7 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 
-	GOval ball = null;
+	private GOval ball;
 
 	private void setUpBall() {
 		double x = getWidth()/2 - BALL_RADIUS;
