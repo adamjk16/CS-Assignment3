@@ -145,7 +145,6 @@ public class Breakout extends GraphicsProgram {
 	private void playGame() {
 		getVelocity();
 		moveBall();
-		getBrick();
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
