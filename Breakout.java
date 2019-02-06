@@ -171,6 +171,16 @@ public class Breakout extends GraphicsProgram {
 		ball.setFilled(true);
 		add (ball, x, y);
 	}
+	
+	private void counterLabel() {
+		removeAll();
+		GLabel counterLabel = new GLabel ("Score: " + counter);
+		counterLabel.setFont ("Calibri-28");
+		counterLabel.setColor (Color.GREEN);
+		double x = getWidth() - counterLabel.getWidth();
+		double y = getHeight() - counterLabel.getAscent();
+		add (counterLabel, x, y);
+	}
 
 	private void playGame() {
 		getVelocity();
@@ -241,16 +251,6 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 		pause (DELAY);
-	}
-	
-	private void counterLabel() {
-		removeAll();
-		GLabel counterLabel = new GLabel ("Score: " + counter);
-		counterLabel.setFont ("Calibri-28");
-		counterLabel.setColor (Color.YELLOW);
-		double x = getWidth() - counterLabel.getWidth();
-		double y = getHeight() - counterLabel.getAscent();
-		add (counterLabel, x, y);
 	}
 	
 	/*
