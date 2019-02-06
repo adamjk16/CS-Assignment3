@@ -170,8 +170,7 @@ public class Breakout extends GraphicsProgram {
 		getVelocity();
 		pause(1000);
 		while (true) {
-			moveBall();
-			collidingObject();
+			moveBall();			
 			if (ball.getY() > getHeight()) {
 				break;
 			}
@@ -187,7 +186,7 @@ public class Breakout extends GraphicsProgram {
 		
 		/*
 		 * sets vx to be a random double between 1 and 3 and makes it 
-		 * negative half of the time
+		 * negative half of the t
 		 */
 		vx = rgen.nextDouble (1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) {
@@ -211,11 +210,9 @@ public class Breakout extends GraphicsProgram {
 		if (ball.getY() < 0) {
 			vy = -vy;
 		}
-	}	
 		
-	GObject collider = getCollidingObject();
-	
-	private void collidingObject() {
+		GObject collider = getCollidingObject();
+		
 		if (collider == paddle) {
 			
 			//Flips vy if ball is moving up, as in the case where the ball collides with the side of the paddle
