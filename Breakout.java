@@ -242,6 +242,16 @@ public class Breakout extends GraphicsProgram {
 		pause (DELAY);
 	}
 	
+	private void () {
+		removeAll();
+		tryAgain = new GLabel ("Try Again!");
+		tryAgain.setFont ("Calibri-28");
+		tryAgain.setColor (Color.YELLOW);
+		double x = getWidth()/2 - tryAgain.getWidth()/2;
+		double y = getHeight()/2 - tryAgain.getAscent()/2;
+		add (tryAgain, x, y);
+	}
+	
 	/*
 	 * returns null if the ball (at any point on the ball)hits a brick, section
 	 * covers 4 points occupying the four corners of the square in which the ball
