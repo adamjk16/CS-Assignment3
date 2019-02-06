@@ -177,13 +177,17 @@ public class Breakout extends GraphicsProgram {
 		}	
 	}
 
-
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	private double vx, vy;
 
 	private void getVelocity() {
 		vy = VELOCITY_Y;
+		
+		/*
+		 * sets vx to be a random double between 1 and 3 and makes it 
+		 * negative half of the time
+		 */
 		vx = rgen.nextDouble (1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) {
 			vx = -vx;
