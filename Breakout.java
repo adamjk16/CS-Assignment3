@@ -215,12 +215,6 @@ public class Breakout extends GraphicsProgram {
 
 	}
 
-	private void terminateGame() {
-		tryAgain();
-		remove (paddle);
-		remove (ball);
-		startOver();
-	}
 	private void gameOver() {
 		GLabel gameOver = new GLabel ("Game Over!");
 		gameOver.setFont ("SansSerif-28");
