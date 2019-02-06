@@ -145,6 +145,7 @@ public class Breakout extends GraphicsProgram {
 	private void playGame() {
 		getVelocity();
 		moveBall();
+		getBrick();
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
@@ -175,17 +176,19 @@ public class Breakout extends GraphicsProgram {
 			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
 				break;
 			}	
-		
-			GObject collider = getCollidingObject();
-			if (collider == paddle) {
-				if (ball.getY() >= getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS * 2) {		
-					vy = -vy;
-				}
-			} else if (collider != null) {
-				remove (collider);
-				vy = -vy;
-				bricks--;
-			}
+		}
+	}	
+	
+	private void getBrick() {
+	GObject collider = getCollidingObject();
+	if (collider == paddle) {
+		if (ball.getY() >= getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS * 2) {						
+			vy = -vy;
+		}		
+	} else if (collider != null) {
+			remove (collider);
+			vy = -vy;
+			bricks--;
 		}	
 	}
 		
