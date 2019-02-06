@@ -171,7 +171,18 @@ public class Breakout extends GraphicsProgram {
 		add (ball, x, y);
 	}
 	
-
+	
+	int counter = 0;
+	
+	private void scoreLabel() {
+		removeAll();
+		GLabel scoreLabel = new GLabel ("Score: " + counter);
+		scoreLabel.setFont ("Calibri-28");
+		scoreLabel.setColor (Color.GREEN);
+		double x = getWidth() - scoreLabel.getWidth();
+		double y = getHeight() - scoreLabel.getAscent();
+		add (scoreLabel, x, y);
+	}
 
 	private void playGame() {
 		getVelocity();
