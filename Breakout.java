@@ -79,10 +79,12 @@ public class Breakout extends GraphicsProgram {
 			setUpGame();
 			playGame();
 			if (i < NTURNS - 1) {
-			tryAgain();
-			startOver();
+				tryAgain();
+				startOver();
 			}
-			
+			if (bricks == 0) {
+				winner();
+			}
 		}
 		gameOver();
 	}
@@ -159,7 +161,6 @@ public class Breakout extends GraphicsProgram {
 	
 	private double vx, vy;
 
-	int bricks = 100;
 
 	private void getVelocity() {
 		vy = VELOCITY_Y;
@@ -169,13 +170,14 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	
+	int bricks = 100;
+			
 	private void moveBall() {
 		ball.move(vx, vy);
 		if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {			
 			vx = -vx;
 		}
-		if (ball.getY() <= 0) {
+		if (ball.getY() <= 0 || ) {
 			vy = -vy;
 		}
 		GObject collider = getCollidingObject();
@@ -239,6 +241,15 @@ public class Breakout extends GraphicsProgram {
 	private void startOver() {
 		waitForClick();
 		remove (tryAgain);
+	}
+	
+	private void winner() {
+		removeAll();
+		GLabel winner =  new GLabel ("Winner!");
+		winner.setFont ("SansSerif-28");
+		double x = getWidth()/2 - winner.getWidth()/2;
+		double y = getHeight()/2 - winner.getAscent()/2;
+		add (winner, x, y);
 	}
 }
 
