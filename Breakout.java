@@ -172,6 +172,8 @@ public class Breakout extends GraphicsProgram {
 		add (ball, x, y);
 	}
 	
+	int counter = 0;
+	
 	private void counterLabel() {
 		removeAll();
 		GLabel counterLabel = new GLabel ("Score: " + counter);
@@ -211,8 +213,6 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	int bricks = 100;
-	
-	int counter = 0;
 			
 	private void moveBall() {
 		ball.move(vx, vy);
@@ -254,7 +254,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	/*
-	 * returns null if the ball (at any point on the ball)hits a brick, section
+	 * returns null if the ball (at any point on the ball hits a brick, section
 	 * covers 4 points occupying the four corners of the square in which the ball
 	 * is inscribed
 	 */
