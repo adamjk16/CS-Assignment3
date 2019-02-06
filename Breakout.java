@@ -219,6 +219,7 @@ public class Breakout extends GraphicsProgram {
 	private void gameOver() {
 		GLabel gameOver = new GLabel ("Game Over!");
 		gameOver.setFont ("SansSerif-28");
+		gameOver.setColor(Color.RED);
 		double x = getWidth()/2 - gameOver.getWidth()/2;
 		double y = getHeight()/2 - gameOver.getAscent()/2;
 		add (gameOver, x, y);
@@ -230,6 +231,7 @@ public class Breakout extends GraphicsProgram {
 		removeAll();
 		tryAgain = new GLabel ("Click to Try Again!");
 		tryAgain.setFont ("SansSerif-28");
+		tryAgain.setColor (Color.YELLOW);
 		double x = getWidth()/2 - tryAgain.getWidth()/2;
 		double y = getHeight()/2 - tryAgain.getAscent()/2;
 		add (tryAgain, x, y);
@@ -244,6 +246,7 @@ public class Breakout extends GraphicsProgram {
 		removeAll();
 		GLabel winner =  new GLabel ("Winner!");
 		winner.setFont ("SansSerif-28");
+		winner.setColor(Color.GREEN);
 		double x = getWidth()/2 - winner.getWidth()/2;
 		double y = getHeight()/2 - winner.getAscent()/2;
 		add (winner, x, y);
