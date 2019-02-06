@@ -244,12 +244,12 @@ public class Breakout extends GraphicsProgram {
 	
 	private void counterLabel() {
 		removeAll();
-		tryAgain = new GLabel ("Try Again!");
-		tryAgain.setFont ("Calibri-28");
-		tryAgain.setColor (Color.YELLOW);
-		double x = getWidth()/2 - tryAgain.getWidth()/2;
-		double y = getHeight()/2 - tryAgain.getAscent()/2;
-		add (tryAgain, x, y);
+		GLabel counterLabel = new GLabel ("Score: " + counter);
+		counterLabel.setFont ("Calibri-28");
+		counterLabel.setColor (Color.YELLOW);
+		double x = getWidth() - counterLabel.getWidth()/2;
+		double y = getHeight() - counterLabel.getAscent()/2;
+		add (counterLabel, x, y);
 	}
 	
 	/*
