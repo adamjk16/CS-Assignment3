@@ -67,7 +67,7 @@ public class Breakout extends GraphicsProgram {
 	public static final double VELOCITY_X_MAX = 3.0;
 
 	// Animation delay or pause time between ball moves (ms)
-	public static final double DELAY = 1000.0 / 400.0;
+	public static final double DELAY = 1000.0 / 80.0;
 
 	// Number of turns 
 	public static final int NTURNS = 3;
