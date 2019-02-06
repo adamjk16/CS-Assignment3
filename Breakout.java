@@ -82,6 +82,7 @@ public class Breakout extends GraphicsProgram {
 			tryAgain();
 			startOver();
 			}
+			
 		}
 		gameOver();
 	}
@@ -236,7 +237,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void startOver() {
-		addMouseListeners();
+		waitForClick();
 		remove (tryAgain);
 	}
 }
