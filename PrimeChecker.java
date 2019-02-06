@@ -45,6 +45,6 @@ public class PrimeChecker extends ConsoleProgram {
 				return false;
 			}
 		}
-		return true; // this is only here so the program compiles
+		return n % i != 0; // this is only here so the program compiles
 	}
 }
