@@ -175,10 +175,10 @@ public class Breakout extends GraphicsProgram {
 			
 	private void moveBall() {
 		ball.move(vx, vy);
-		if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {			
+		if (ball.getX() < 0 || ball.getX() + BALL_RADIUS > getWidth()) {			
 			vx = -vx;
 		}
-		if (ball.getY() <= 0) {
+		if (ball.getY() < 0) {
 			vy = -vy;
 		}
 		GObject collider = getCollidingObject();
