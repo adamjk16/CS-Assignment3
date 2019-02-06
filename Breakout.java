@@ -158,8 +158,8 @@ public class Breakout extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5)) {
 			vx = -vx;
 		}
+		addMouseListeners();
 		while (true) {
-			addMouseListeners();
 			ball.move(vx, vy);
 			pause (DELAY);
 			if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {
