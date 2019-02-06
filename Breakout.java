@@ -95,7 +95,7 @@ public class Breakout extends GraphicsProgram {
 		setUpBricks();
 		setUpPaddle();
 		setUpBall();
-		scoreLabel();
+		score();
 	}
 
 	private void setUpBricks() {
@@ -175,13 +175,15 @@ public class Breakout extends GraphicsProgram {
 	
 	int counter = 0;
 	
-	private void scoreLabel() {
-		GLabel scoreLabel = new GLabel ("Score: " + counter);
-		scoreLabel.setFont ("Calibri-28");
-		scoreLabel.setColor (Color.GREEN);
-		double x = getWidth() - scoreLabel.getWidth();
-		double y = getHeight() - scoreLabel.getAscent();
-		add (scoreLabel, x, y);
+	private GLabel score;
+	
+	private void score() {
+		score = new GLabel ("Score: " + counter);
+		score.setFont ("Calibri-28");
+		score.setColor (Color.GREEN);
+		double x = getWidth() - score.getWidth();
+		double y = getHeight() - score.getAscent();
+		add (score, x, y);
 	}
 
 	private void playGame() {
@@ -241,7 +243,7 @@ public class Breakout extends GraphicsProgram {
 			} else if (vy > 0) {
 				vy *= -1;
 			}
-		}	else if (collider != null && collide) {
+		}	else if (collider != null && collider != score) {
 				remove (collider);
 				vy = -vy;
 				bricks--;
