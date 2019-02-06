@@ -201,7 +201,7 @@ public class Breakout extends GraphicsProgram {
 			vx = -vx;
 		}
 		
-		//Ball will flip vy if it hits either side wall
+		//Ball will flip vy if it hits the top wall
 		
 		if (ball.getY() < 0) {
 			vy = -vy;
