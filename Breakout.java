@@ -144,7 +144,12 @@ public class Breakout extends GraphicsProgram {
 
 	private void playGame() {
 		getVelocity();
-		moveBall();
+		while (true) {
+			moveBall();
+			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
+				break;
+			}
+		}	
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
@@ -163,7 +168,6 @@ public class Breakout extends GraphicsProgram {
 	
 	private void moveBall() {
 		addMouseListeners();
-		while (true) {
 			ball.move(vx, vy);
 			pause (DELAY);
 			if (ball.getX() <= 0 || ball.getX() >= getWidth() - (ball.getWidth() / 2)) {
@@ -171,9 +175,6 @@ public class Breakout extends GraphicsProgram {
 			}
 			if (ball.getY() <= 0) {
 				vy = -vy;
-			}
-			if (ball.getY() > getHeight() - (ball.getHeight() / 2)) {
-				break;
 			}
 			
 				GObject collider = getCollidingObject();
@@ -187,7 +188,7 @@ public class Breakout extends GraphicsProgram {
 						bricks--;
 					}	
 				}
-		}
+	
 		
 		
 	
