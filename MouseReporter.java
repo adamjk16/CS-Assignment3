@@ -37,16 +37,14 @@ public class MouseReporter extends GraphicsProgram {
 		addMouseListeners();
 	}
 	
+	
 	public void mouseMoved (MouseEvent e) {
 		int x = e.getX();
 		int y = e.getY();
 		label.setLabel(x + "," + y);
-		getElementAt(x,y);
-		if (label != null) {
+		if (getElementAt (x, y) != null) {
 			label.setColor(Color.RED);
 		}
 	}
-	
-
-
 }
+
