@@ -85,6 +85,7 @@ public class Breakout extends GraphicsProgram {
 			if (bricks == 0) {
 				winner();
 				break;
+				
 			}
 		}
 		gameOver();
