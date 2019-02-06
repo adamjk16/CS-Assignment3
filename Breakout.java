@@ -213,8 +213,8 @@ public class Breakout extends GraphicsProgram {
 			
 			//Flips vy if ball is moving down
 			
-			if (vy < 0) {
-				vy *= 1;
+			if (vy > 0) {
+				vy *= -1;
 			
 			//	
 				
