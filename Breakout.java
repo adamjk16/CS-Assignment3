@@ -209,7 +209,9 @@ public class Breakout extends GraphicsProgram {
 		GObject collider = getCollidingObject();
 		if (collider == paddle) {
 			vy = -vy;
-			if 
+			if (ball.getX < collider.getX || ball.getX > ) {
+				
+			}
 		}	else if (collider != null) {
 				remove (collider);
 				vy = -vy;
