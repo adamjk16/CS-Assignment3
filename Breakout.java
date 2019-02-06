@@ -206,8 +206,12 @@ public class Breakout extends GraphicsProgram {
 		if (ball.getY() < 0) {
 			vy = -vy;
 		}
+		
 		GObject collider = getCollidingObject();
+		
 		if (collider == paddle) {
+			
+			//Flips vy 
 			if (vy < 0) {
 				vy *= 1;
 			} else if (vy > 0) {
