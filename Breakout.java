@@ -1,10 +1,15 @@
 /*
  * File: Breakout.java
  * -------------------
- * Name:
- * Section Leader:
+ * Name: Adam Kincer
+ * Section Leader: Christian Davis
  * 
- * This file will eventually implement the game of Breakout.
+ * This program establishes 10 rows of multi-colored bricks
+ * near the top of the screen, a paddle (thin rectangle) near the
+ * bottom, and a ball in the center. The user can then move the 
+ * paddle to bounce the ball, which automatically moves off of it.
+ * If the ball hits a brick, the brick will be removed. The user
+ * has 3 attempts to clear all of the bricks. 
  */
 
 import acm.graphics.*;
@@ -62,7 +67,7 @@ public class Breakout extends GraphicsProgram {
 	public static final double VELOCITY_X_MAX = 3.0;
 
 	// Animation delay or pause time between ball moves (ms)
-	public static final double DELAY = 1000.0 / 80.0;
+	public static final double DELAY = 1000.0 / 400.0;
 
 	// Number of turns 
 	public static final int NTURNS = 3;
@@ -130,7 +135,7 @@ public class Breakout extends GraphicsProgram {
 		//gives y-coordinate of paddle
 		
 		double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
-		paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddle = new GRect (getWidth(), PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		add (paddle, x, y);
 		addMouseListeners();
