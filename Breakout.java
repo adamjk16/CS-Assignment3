@@ -168,6 +168,7 @@ public class Breakout extends GraphicsProgram {
 
 	private void playGame() {
 		getVelocity();
+		pause(3000);
 		while (true) {
 			moveBall();			
 			if (ball.getY() > getHeight()) {
@@ -258,7 +259,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void startOver() {
-		waitForClick();
+		pause(3000);
 		remove (tryAgain);
 	}
 	
