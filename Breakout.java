@@ -214,7 +214,7 @@ public class Breakout extends GraphicsProgram {
 					vx = -vx;
 				}
 			} else if (ball.getX() + BALL_RADIUS * 2 > collider.getX() + PADDLE_WIDTH) {
-				if (vx > 0) {
+				if (vx < 0) {
 					vx = -vx;
 				}	
 			}
