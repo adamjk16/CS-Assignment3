@@ -212,9 +212,12 @@ public class Breakout extends GraphicsProgram {
 		if (collider == paddle) {
 			
 			//Flips vy if ball is moving down
+			
 			if (vy < 0) {
 				vy *= 1;
 			
+			//	
+				
 			} else if (vy > 0) {
 				vy *= -1;
 			}
