@@ -162,7 +162,7 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private GOval ball;
-
+	
 	private void setUpBall() {
 		double x = getWidth()/2 - BALL_RADIUS;
 		double y = getHeight()/2 - BALL_RADIUS;
@@ -200,6 +200,8 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	int bricks = 100;
+	
+	int counter = 0;
 			
 	private void moveBall() {
 		ball.move(vx, vy);
@@ -232,6 +234,7 @@ public class Breakout extends GraphicsProgram {
 				remove (collider);
 				vy = -vy;
 				bricks--;
+				counter++;
 			if (bricks == 0) {
 				winner();	
 			}
