@@ -135,7 +135,7 @@ public class Breakout extends GraphicsProgram {
 		//gives y-coordinate of paddle
 		
 		double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
-		paddle = new GRect (getWidth(), PADDLE_HEIGHT);
+		paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		add (paddle, x, y);
 		addMouseListeners();
