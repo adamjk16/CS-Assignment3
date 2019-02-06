@@ -147,7 +147,10 @@ public class Breakout extends GraphicsProgram {
 		
 		if (x > PADDLE_WIDTH/2  && x < getWidth() - PADDLE_WIDTH/2) {
 			
-			//Mouse will track the center of the paddle
+			/*
+			 * Mouse will track the center of the paddle, the y-coordinate
+			 * will remain constant
+			 */
 			
 			paddle.setLocation(x - PADDLE_WIDTH/2, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		}
