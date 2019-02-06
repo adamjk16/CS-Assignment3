@@ -41,7 +41,7 @@ public class MouseReporter extends GraphicsProgram {
 		int x = e.getX();
 		int y = e.getY();
 		label.setLabel(x + "," + y);
-		
+		getElementAt(x,y);
 		if (label != null) {
 			label.setColor(Color.RED);
 		}
