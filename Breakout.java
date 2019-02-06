@@ -227,6 +227,8 @@ public class Breakout extends GraphicsProgram {
 	private GLabel tryAgain;
 	
 	private void tryAgain() {
+		remove(ball);
+		remove(paddle);
 		tryAgain = new GLabel ("Try Again!");
 		tryAgain.setFont ("SansSerif-28");
 		double x = getWidth()/2 - tryAgain.getWidth()/2;
