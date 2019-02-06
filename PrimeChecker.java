@@ -40,6 +40,10 @@ public class PrimeChecker extends ConsoleProgram {
 	 * @return true if n is prime and false otherwise
 	 */
 	public boolean isPrime(int n) {
+		
+		/*
+		 * checks all numbers (i) between 2 and n against n
+		 */
 		for (int i = 2; i < n; i++) {
 			if (n % i == 0) {
 				return false;
