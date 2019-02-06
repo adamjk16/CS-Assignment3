@@ -141,7 +141,7 @@ public class Breakout extends GraphicsProgram {
 		 * screen on both sides
 		 */
 		
-		if (x < PADDLE_WIDTH/2  && x > getWidth() - PADDLE_WIDTH/2) {
+		if (x > PADDLE_WIDTH/2  && x < getWidth() - PADDLE_WIDTH/2) {
 			
 			//Mouse will track the center of the paddle
 			
