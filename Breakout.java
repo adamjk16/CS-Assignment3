@@ -95,11 +95,12 @@ public class Breakout extends GraphicsProgram {
 	private void setUpBricks() {
 		//defines x-coordinate of upper left brick in 1st row
 		double x = getWidth()/2 - BRICK_SEP/2 - (BRICK_WIDTH * (NBRICK_COLUMNS/2)) - ((NBRICK_COLUMNS/2 - 1) * BRICK_SEP);
-		//defines y-coordinate of 
+		//defines y-coordinate of upper left brick in 1st row
 		double y = BRICK_Y_OFFSET;
-		//
+		//loops through each row
 		for (int rowNumber = 1; rowNumber <= NBRICK_ROWS; rowNumber++) {
-			for (int layBricks = 0; layBricks < NBRICK_COLUMNS; layBricks++) {
+		//adds bricks to each row
+			for (int brickNumber = 0; brickNumber < NBRICK_COLUMNS; brickNumber++) {
 				GRect brick = new GRect (BRICK_WIDTH, BRICK_HEIGHT);
 				brick.setFilled(true);
 				if (rowNumber == 1 || rowNumber == 2) {
@@ -113,7 +114,7 @@ public class Breakout extends GraphicsProgram {
 				} else if (rowNumber == 9 || rowNumber == 10) {
 					brick.setColor(Color.CYAN);
 				}
-				add (brick, x + (layBricks * (BRICK_SEP + BRICK_WIDTH)), y + (rowNumber * (BRICK_HEIGHT + BRICK_SEP)));	
+				add (brick, x + (brickNumber * (BRICK_SEP + BRICK_WIDTH)), y + (rowNumber * (BRICK_HEIGHT + BRICK_SEP)));	
 			}
 		}
 	}
@@ -121,7 +122,9 @@ public class Breakout extends GraphicsProgram {
 	private GRect paddle; 
 
 	private void setUpPaddle() {
+		//gives x-coordinate of paddle
 		double x = getWidth()/2 - PADDLE_WIDTH/2;
+		//gives y-coordinate of paddle
 		double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
 		paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
