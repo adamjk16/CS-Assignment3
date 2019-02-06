@@ -29,7 +29,7 @@ public class MouseReporter extends GraphicsProgram {
 		
 		// this setLabel method takes in a "String" 
 		// you can concatenate integers and commas as such:
-		label.setLabel(0 + "," + 0);
+		label.setLabel(getCoord(x) + "," + getCoord(y));
 		
 		// add the label to the screen!
 		add(label, INDENT, getHeight()/2);
@@ -37,7 +37,7 @@ public class MouseReporter extends GraphicsProgram {
 		addMouseListeners();
 	}
 	
-	public void mouseMoved (MouseEvent e) {
+	private int getCoord (String str) {
 		int x = e.getX();
 		int y = e.getY();
 		char coord = label.charAt(x, y);
