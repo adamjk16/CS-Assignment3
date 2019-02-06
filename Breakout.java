@@ -168,7 +168,7 @@ public class Breakout extends GraphicsProgram {
 
 	private void playGame() {
 		getVelocity();
-		pause(3000);
+		pause(1500);
 		while (true) {
 			moveBall();			
 			if (ball.getY() > getHeight()) {
@@ -250,7 +250,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private void tryAgain() {
 		removeAll();
-		tryAgain = new GLabel ("Click to Try Again!");
+		tryAgain = new GLabel ("Try Again!");
 		tryAgain.setFont ("Calibri-28");
 		tryAgain.setColor (Color.YELLOW);
 		double x = getWidth()/2 - tryAgain.getWidth()/2;
@@ -259,7 +259,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void startOver() {
-		pause(3000);
+		pause(1500);
 		remove (tryAgain);
 	}
 	
