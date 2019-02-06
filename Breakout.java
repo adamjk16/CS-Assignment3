@@ -160,15 +160,9 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void playGame() {
-		getVelocity();
 		addMouseListeners();
 		while (true) {
-			moveBall();
-			
-			/*
-			 * If the y-coordinate moves past the 
-			 */
-			
+			moveBall();			
 			if (ball.getY() > getHeight()) {
 				break;
 			}
@@ -176,7 +170,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void mouseClicked (MouseEvent g) {
-		
+		getVelocity();
 	}
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
