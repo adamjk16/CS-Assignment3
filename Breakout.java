@@ -193,7 +193,7 @@ public class Breakout extends GraphicsProgram {
 		
 		
 	
-	public void mouseClicked (MouseEvent e) {
+	public void mouseClicked (MouseEvent g) {
 		
 	}
 
@@ -236,7 +236,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void startOver() {
-		waitForClick();
+		addMouseListeners();
 		remove (tryAgain);
 	}
 }
